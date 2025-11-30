@@ -1,0 +1,238 @@
+   * {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #f4f6fa;
+    margin: 0;
+}
+
+.jc {
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    padding: 0 20px;
+    background: #ffffff;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+/* LOGOUT BUTTON */
+
+.logout-btn {
+    width: 95px;
+    height: 38px;
+    border: none;
+    background: #ff5353;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #e02e2e;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.parent {
+    height: 90%;
+    width: 38%;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px 0;
+    border-radius: 14px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+}
+
+/* ---------- MAIN HEADING ---------- */
+
+main h2 {
+    color: #3b3b3b;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* ---------- INPUT FIELD + BUTTON ---------- */
+
+.detail input {
+    width: 260px;
+    height: 42px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 2px solid #cfcfcf;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.detail input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0px 0px 5px rgba(108, 99, 255, 0.4);
+}
+
+#btn {
+    width: 95px;
+    height: 42px;
+    margin-left: 10px;
+    background: #6c63ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#btn:hover {
+    background: #574bff;
+}
+
+/* ---------- TASK AREA ---------- */
+
+.taskcontainer {
+    margin: 15px 0;
+}
+
+.taskbox {
+    height: 50vh;
+    width: 80%;
+    padding: 12px;
+    overflow-y: auto;
+    background: #fafafa;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0px 2px 5px rgba(0,0,0,0.04);
+}
+
+/* ---------- EACH TASK ITEM ---------- */
+
+.taskimgparent {
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    background: #ffffff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    transition: 0.2s ease;
+}
+
+.taskimgparent:hover {
+    border-color: #6c63ff;
+}
+
+.delete {
+    cursor: pointer;
+    width: 22px;
+    transition: 0.2s ease;
+}
+
+.delete:hover {
+    transform: scale(1.2);
+}
+
+.task {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task textarea {
+    width: 220px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+}
+
+.task input {
+    width: 20px;
+    cursor: pointer;
+}
+        @media only screen and (max-width:1400px)
+        {
+             .parent {
+            width: 80%;
+        }
+        }
+
+        @media only screen and (max-width:690px)
+        {
+             .parent {
+            width: 100%;
+            height: 100%;
+        }
+        main{
+            margin-bottom: 30px;
+        }
+        footer{
+                    /* height: 70%; */
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        }
+        .taskbox{
+            width: 100%;
+        }
+        .parent{
+            padding: 10px;
+        }
+        header{
+            justify-content: space-between;
+        }
+          .logout-btn {
+            width: 15%;
+            height: 54%;
+            }
+            .detail{
+                width: 80%;
+            }
+        }
+
+         @media only screen and (max-width:470px){
+             .detail{
+                width: 100%;
+             }
+             .detail > :nth-child(1)
+             {
+                width: 77%;
+             }
+             .detail > :nth-child(1) input{
+                width: 100%;
+             }
+             .task textarea{
+                width: 165px;
+             }
+             .logout-btn{
+                width: 22%;
+                 height: 64%;
+             }
+         }
