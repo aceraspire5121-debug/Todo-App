@@ -145,10 +145,10 @@ document.querySelector(".taskbox").addEventListener("dblclick",async (e)=>{
         const edit=e.target.closest(".taskimgparent")
         const ok=Number(edit.dataset.id) 
         const index=task2.findIndex(b=>b.id===ok)
-       const newtext= prompt("Enter new text",task2[index].text)
+       const newText=prompt("Enter new text",task2[index].text)
        if (!newText || newText.trim() === "") return;
        try{
-        const data=await fetch("/update",{method:"PUT", headers: { "Content-Type": "application/json","Authorization": token }, body: JSON.stringify({id:ok,new:newtext})})
+        const data=await fetch("/update",{method:"PUT", headers: { "Content-Type": "application/json","Authorization": token }, body: JSON.stringify({id:ok,new:newText})})
 
           if (data.status === 401) {  // token expired ya invalid
             localStorage.removeItem("token");  // purana token remove karo
