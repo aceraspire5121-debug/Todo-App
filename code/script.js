@@ -146,7 +146,7 @@ document.querySelector(".taskbox").addEventListener("dblclick",async (e)=>{
         const ok=Number(edit.dataset.id) 
         const index=task2.findIndex(b=>b.id===ok)
        const newtext= prompt("Enter new text",task2[index].text)
-       if(newtext!=""){
+       if (!newText || newText.trim() === "") return;
        try{
         const data=await fetch("/update",{method:"PUT", headers: { "Content-Type": "application/json","Authorization": token }, body: JSON.stringify({id:ok,new:newtext})})
 
@@ -163,7 +163,7 @@ document.querySelector(".taskbox").addEventListener("dblclick",async (e)=>{
        {
         console.log("update not happened")
        }
-       }
+       
 })
 
 //Checkbox

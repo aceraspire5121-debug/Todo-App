@@ -33,6 +33,7 @@ try{
 }
 }
 
+
 app.get('/getting', auth, async(req, res) => {
   try{
   const data=await Todo.find({user:req.userId}) // it will find all the documents associated with the user who has logged in, since on his login , he will get a token, through that token varification, req.userID is generated for that user so his documents contains specific userID which is different from other users and no one can access themm
